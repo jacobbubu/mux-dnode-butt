@@ -1,6 +1,6 @@
 This is a demo running dnode and scuttlebutt on the same websocket stream with mux-demux.
 
-Code is writting in CoffeeScript.
+Code has been written in CoffeeScript.
 
 # Install #
 
