@@ -21,7 +21,7 @@ domready ->
   mxStreamForRpc = mx.createStream 'rpc'
   mxStreamForRpc.pipe(d).pipe mxStreamForRpc
   mxStreamForTimer = mx.createStream 'timer'
-  mxStreamForTimer.pipe(timerStream = timerModel.createStream()).pipe mxStreamForTimer
+  mxStreamForTimer.pipe(timerStream = timerModel.createStream wrapper:'raw').pipe mxStreamForTimer
 
   #  bind mx to conn
   conn.pipe(mx).pipe conn

@@ -28,7 +28,7 @@ wsServer.on 'connection', (ws) ->
       when 'rpc'
         _stream.pipe(dnode rpcSpecs).pipe _stream
       when 'timer'
-        _stream.pipe(timerModel.createStream()).pipe _stream
+        _stream.pipe(timerModel.createStream wrapper:'raw' ).pipe _stream
 
   conn.on 'close', ->
     (clearInterval iv; iv = null) if iv?
