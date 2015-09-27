@@ -1,18 +1,17 @@
 This is a demo running dnode and scuttlebutt on the same websocket stream with mux-demux.
 
-Code has been written in CoffeeScript.
+Code has been written in CoffeeScript but running in JavaScript.
 
 # Install #
 
 ```
-sudo npm install grunt-cli browserify -g
 npm install
 ```
 
 then complie:
 
 ```
-grunt
+npm build
 ```
 
 # Run #
@@ -20,7 +19,7 @@ grunt
 Start server:
 
 ```
-node lib/server.js
+npm start
 ```
 
 Start browser: `http://localhost:9999`

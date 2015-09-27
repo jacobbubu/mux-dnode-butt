@@ -28,7 +28,7 @@ wsServer.on 'connection', (ws) ->
       when 'rpc'
         _stream.pipe(dnode rpcSpecs).pipe _stream
       when 'timer'
-        _stream.pipe(timerModel.createStream wrapper:'raw' ).pipe _stream
+        _stream.pipe(timerModel.createStream wrapper:'raw').pipe _stream
 
   conn.on 'close', ->
     (clearInterval iv; iv = null) if iv?
@@ -45,4 +45,5 @@ wsServer.on 'connection', (ws) ->
   #  watch the in-out messages
   conn.pipe process.stdout, end: false
 
-httpServer.listen 9999
+httpServer.listen port = 9999
+console.log 'Server is listening on port', port
